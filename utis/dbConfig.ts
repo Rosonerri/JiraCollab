@@ -20,3 +20,8 @@ const mainConnection = async () => {
   .catch(()=>{
     console.error()
   })
+  .finally(()=>{
+    client.close()
+  })
+
+  export const db = client.db("taskedDB").collection("taskes");
