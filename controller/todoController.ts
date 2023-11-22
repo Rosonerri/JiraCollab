@@ -14,3 +14,17 @@ export const createTodo = async (req: Request, res: Response) => {
     });
   }
 };
+export const viewTodo = async (req: Request, res: Response) => {
+  try {
+    // const todo = await todoModel.find();
+
+    res.status(200).json({
+      message: "done",
+      data: "done",
+    });
+  } catch (error) {
+    res.status(404).json({
+      message: "failed",
+    });
+  }
+};
