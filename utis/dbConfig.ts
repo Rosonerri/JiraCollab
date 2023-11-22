@@ -17,3 +17,6 @@ const mainConnection = async () => {
     console.log(res);
     
   })
+  .catch(()=>{
+    console.error()
+  })
