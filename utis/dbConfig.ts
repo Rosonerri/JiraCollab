@@ -11,3 +11,9 @@ const mainConnection = async () => {
       console.log(error);
     }
   };
+
+  mainConnection()
+  .then((res)=>{
+    console.log(res);
+    
+  })
