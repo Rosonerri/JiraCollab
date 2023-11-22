@@ -28,3 +28,17 @@ export const viewTodo = async (req: Request, res: Response) => {
     });
   }
 };
+export const deleteTodo = async (req: Request, res: Response) => {
+  try {
+    // const todo = await todoModel.deleteMany();
+
+    res.status(200).json({
+      message: "done",
+      data: "done",
+    });
+  } catch (error) {
+    res.status(404).json({
+      message: "failed",
+    });
+  }
+};
