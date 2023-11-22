@@ -1,8 +1,10 @@
 import { Document, Schema, model } from "mongoose";
+import { iTodo } from "../utis/interface";
 
-interface iTodo {
-	task: string;
-	achieved: string | null;
-	deadLine: string;
-	done: string;
-}
+export interface iTodoMain extends iTodo, Document {}
+
+const todoModel = new Schema<iTodoMain>({
+	task: {
+		type: String,
+	},
+});
